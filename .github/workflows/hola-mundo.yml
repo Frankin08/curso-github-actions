@@ -1,0 +1,13 @@
+name: Aprendiendo GitHub actions #opcional, nombre del workflow que aparecera en la pestaña de actions
+run-name: ¡Estoy aprendiendo gihuub actions! #opcional, nombre al run especifico del workflow que nos aparecera en lapestaña de actions
+on: [push] #especificar el triger los eventos que pueden hacer iniciar los workflows
+jobs:  # agrupar todos los jobs del workflows
+  hola-mundo: #nombre del job
+    runs-on: ubuntu-latest #especificar el tpo de runner para este job
+    steps:
+      - name: Checkout  #opcional, nombre que identifica el step
+        uses: actions/checkout@v3
+      - name: Run a one-line script
+        run: echo "Hello, world" #indica que comando ejecutar en la consola de runner
+      - name: Correr script
+        run: python main.py
